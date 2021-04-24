@@ -25,4 +25,9 @@ public class ContaTest {
         assertThrows(ParametroInvalido.class, () -> conta.deposito(0));
     }
 
+    @Test
+    public void deveRetornarSaldoDecrementadoAoFazerSaque() throws ParametroInvalido {
+        conta.deposito(10);
+        assertEquals(5, conta.saque(5));
+    }
 }

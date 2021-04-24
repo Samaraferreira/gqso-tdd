@@ -11,4 +11,8 @@ public class Conta {
         saldo += valor;
         return saldo;
     }
+
+    public double saque(double valor) {
+        return 0;
+    }
 }
