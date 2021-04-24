@@ -16,12 +16,12 @@ public class ContaTest {
     }
 
     @Test
-    public void deveRetornarSaldoIncrementadoAoFazerDeposito() {
+    public void deveRetornarSaldoIncrementadoAoFazerDeposito() throws ParametroInvalido {
         assertEquals(10, conta.deposito(10));
     }
 
     @Test
-    public void deveRetornarExcecaoQuandoParametroForInvalido() {
+    public void deveRetornarExcecaoQuandoParametroForInvalido() throws ParametroInvalido {
         assertThrows(ParametroInvalido.class, () -> conta.deposito(0));
     }
 
