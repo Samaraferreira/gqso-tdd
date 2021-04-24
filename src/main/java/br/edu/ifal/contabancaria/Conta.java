@@ -13,6 +13,7 @@ public class Conta {
     }
 
     public double saque(double valor) {
-        return 0;
+        saldo -= valor;
+        return saldo;
     }
 }
