@@ -22,4 +22,8 @@ public class Conta {
         saldo -= valor;
         return saldo;
     }
+
+    public double getSaldo() {
+        return 0;
+    }
 }
