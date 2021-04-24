@@ -21,20 +21,20 @@ public class ContaTest {
     }
 
     @Test
-    public void deveRetornarExcecaoQuandoParametroForInvalido() throws ParametroInvalido {
+    public void deveRetornarExcecaoQuandoParametroForInvalido() {
         assertThrows(ParametroInvalido.class, () -> conta.deposito(0));
 
         assertThrows(ParametroInvalido.class, () -> conta.saque(0));
     }
 
     @Test
-    public void deveRetornarSaldoDecrementadoAoFazerSaque() throws ParametroInvalido {
+    public void deveRetornarSaldoDecrementadoAoFazerSaque() throws ParametroInvalido, SaldoInsuficiente {
         conta.deposito(10);
         assertEquals(5, conta.saque(5));
     }
 
     @Test
-    public void deveRetornarExcecaoQuandoSaldoForInsufienteParaSaque() throws ParametroInvalido {
-        assertThrows(SaldoInsuficiente.class, () -> conta.saque(20));
+    public void deveRetornarExcecaoQuandoSaldoForInsufienteParaSaque() {
+        assertThrows(SaldoInsuficiente.class, () -> conta.saque(60));
     }
 }
