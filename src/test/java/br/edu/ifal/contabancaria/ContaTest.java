@@ -23,6 +23,8 @@ public class ContaTest {
     @Test
     public void deveRetornarExcecaoQuandoParametroForInvalido() throws ParametroInvalido {
         assertThrows(ParametroInvalido.class, () -> conta.deposito(0));
+
+        assertThrows(ParametroInvalido.class, () -> conta.saque(0));
     }
 
     @Test
