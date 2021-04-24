@@ -32,4 +32,9 @@ public class ContaTest {
         conta.deposito(10);
         assertEquals(5, conta.saque(5));
     }
+
+    @Test
+    public void deveRetornarExcecaoQuandoSaldoForInsufienteParaSaque() throws ParametroInvalido {
+        assertThrows(SaldoInsuficiente.class, () -> conta.saque(20));
+    }
 }
