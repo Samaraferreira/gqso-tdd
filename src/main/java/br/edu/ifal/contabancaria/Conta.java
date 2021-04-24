@@ -12,7 +12,10 @@ public class Conta {
         return saldo;
     }
 
-    public double saque(double valor) {
+    public double saque(double valor) throws ParametroInvalido {
+        if (valor == 0) {
+            throw new ParametroInvalido();
+        }
         saldo -= valor;
         return saldo;
     }
