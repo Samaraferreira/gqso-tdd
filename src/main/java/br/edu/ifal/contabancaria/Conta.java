@@ -5,6 +5,7 @@ public class Conta {
     private double saldo = 0.0;
 
     public double deposito(double valor) {
-        return 0;
+        saldo += valor;
+        return saldo;
     }
 }
