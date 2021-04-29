@@ -1,3 +1,1 @@
-# gqso-tdd
-
-JAVA = 11
+### Espero que dê para entender esses commits 😇
